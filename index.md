@@ -1,3 +1,8 @@
+<head>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+
 # Financial Econometrics 
 
 **Author**: Olasubomi Precious Odujebe  
@@ -259,9 +264,9 @@ Understanding the variances and covariances of these stocks is crucial for portf
 
 This table shows the forecasted correlation between the returns of Microsoft (MSFT), Amazon (AMZN), and Google (GOOGL) for the next month. The values represent the strength and direction of the relationships between the stock returns, with values closer to 1 indicating a stronger positive correlation.
 
-MSFT and AMZN Correlation: 0.5292511
-MSFT and GOOGL Correlation: 0.5022229
-AMZN and GOOGL Correlation: 0.5120916
+- MSFT and AMZN Correlation: 0.5292511
+- MSFT and GOOGL Correlation: 0.5022229
+- AMZN and GOOGL Correlation: 0.5120916
 
 ## Sharpe Ratio-Maximizing Portfolio for the Next Month
 
