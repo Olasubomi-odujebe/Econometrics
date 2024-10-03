@@ -183,7 +183,7 @@ These expected returns indicate the predicted monthly performance of each stock,
 To forecast the variance-covariance matrix, we model both the individual stock volatilities and the dynamic correlations between the stocks.
 
 **Modeling Conditional Variances:**
-The conditional variances (volatility) for each stock are modeled using the GARCH(1,1) specification, which incorporates the previously estimated GARCH parameters  $\omega_{i}$, $\alpha_{i}$, and $\beta_{i}$ for each stock:
+The conditional variances (volatility) for each stock are modeled using the GARCH(1,1) specification, which incorporates the previously estimated GARCH parameters  $$\omega_{i}$$, $$\alpha_{i}$$, and $$\beta_{i}$$ for each stock:
 
 $\sigma^2_{i,t+1} = \omega_i + \alpha_i \epsilon^2_{i,t} + \beta_i \sigma^2_{i,t}$
 Where:
