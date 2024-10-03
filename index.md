@@ -56,7 +56,7 @@ chartSeries(GOOGL)
 ## ADF Test Results for Monthly Returns
 The Augmented Dickey-Fuller (ADF) test was applied to the monthly returns of Microsoft (MSFT), Amazon (AMZN), and Google (GOOGL) to assess whether the return series are stationary. The null hypothesis for the ADF test is that the series contains a unit root, meaning it is non-stationary.
 
-```{r}
+```r
 # Calculate monthly returns
 mr_MSFT <- monthlyReturn(MSFT)
 mr_AMZN <- monthlyReturn(AMZN)
@@ -66,7 +66,7 @@ mr_GOOGL <- monthlyReturn(GOOGL)
 dataA3 <- merge(mr_MSFT, mr_AMZN, mr_GOOGL)
 names(dataA3) <- c("mr_MSFT", "mr_AMZN", "mr_GOOGL")
 ```
-```{r warning=FALSE}
+```{r 
 # Conduct ADF test on the monthly returns
 adf_test_returns_MSFT <- adf.test(mr_MSFT, alternative = "stationary")
 adf_test_returns_AMZN <- adf.test(mr_AMZN, alternative = "stationary")
