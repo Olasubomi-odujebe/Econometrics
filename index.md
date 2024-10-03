@@ -168,7 +168,7 @@ fit1
 
 Based on the estimation results from the GARCH-DCC model, we can forecast the expected returns and the variance-covariance matrix for Microsoft (MSFT), Amazon (AMZN), and Google (GOOGL) for the next period.
 
-** 1. Forecasting Expected Returns** (μ)
+ 1. **Forecasting Expected Returns** (μ)
 
 The forecasted mean returns for the three stocks are directly obtained from the model’s estimated parameters. These represent the expected returns for the next period based on historical data:
 
@@ -200,12 +200,12 @@ The DCC(1,1) model parameters (\(dcca1\) and \(dccb1\)) are used to estimate the
 $$Q_{t+1} = (1 - dcca1 - dccb1) \bar{Q} + dcca1 \epsilon_t \epsilon'_t + dccb1 Q_t$$
 
 Where:
-- $\bar{Q}$: Unconditional correlation matrix (the long-run average correlation between the stocks)
-- $Q_{t}$ : Current conditional correlation matrix (correlation at time \(t\))
+- $$\bar{Q}$$: Unconditional correlation matrix (the long-run average correlation between the stocks)
+- $$Q_{t}$$ : Current conditional correlation matrix (correlation at time \(t\))
 - \(dcca1\): Coefficient for the impact of recent shocks to the correlation.
 - \(dccb1\): Coefficient representing the persistence of past correlations.
-- $\epsilon_t$: Vector of residuals at time \(t\).
-- $\epsilon'_t$: Transpose of the vector of residuals at time \(t\).
+- $$\epsilon_t$$: Vector of residuals at time \(t\).
+- $$\epsilon'_t$$: Transpose of the vector of residuals at time \(t\).
 
 **Deriving the Forecasted Variance-Covariance Matrix:**
 The final step is to combine the forecasted individual volatilities and dynamic correlations to derive the variance-covariance matrix. This is done using the following formula:
@@ -213,8 +213,8 @@ The final step is to combine the forecasted individual volatilities and dynamic 
 $$\Sigma_{t+1} = D_{t+1} Q_{t+1} D_{t+1}$$
 
 Where:
-- $\Sigma_{t+1}$: Forecasted variance-covariance matrix for the next period
-- $D_{t+1}$: Diagonal matrix containing the square roots of the forecasted conditional variances for each stock
+- $$\Sigma_{t+1}$$: Forecasted variance-covariance matrix for the next period
+- $$D_{t+1}$$: Diagonal matrix containing the square roots of the forecasted conditional variances for each stock
 
 **Summary:**
 The DCC-GARCH model is a powerful tool that provides forecasts of both expected returns and the evolving relationships between the volatilities and correlations of the stocks. These insights are invaluable for investors looking to enhance their portfolio management by accounting for dynamic risks and return structures.
@@ -283,17 +283,19 @@ Using the forecasted returns and variance-covariance matrix from the GARCH-DCC m
 
 2. **Objective**:
    The Sharpe Ratio is defined as:
-   $SR = \frac{E(r_p) - r_f}{\sigma_p}$
+   $$SR = \frac{E(r_p) - r_f}{\sigma_p}$$
+   
    Where:
-   - $E(r_p)$ is the expected return of the portfolio.
-   - $r_f$ is the risk-free rate of return.
-   - $\sigma_p$ is the standard deviation of the portfolio's returns.
+   
+   - $$E(r_p)$$ is the expected return of the portfolio.
+   - $$r_f$$ is the risk-free rate of return.
+   - $$\sigma_p$$ is the standard deviation of the portfolio's returns.
 
-3. **Constraints**:
+4. **Constraints**:
    - The sum of the portfolio weights must equal 1 (fully invested portfolio).
    - All portfolio weights must be non-negative (no short-selling allowed).
 
-4. **Optimization**:
+5. **Optimization**:
    The objective is to maximize the Sharpe Ratio by adjusting the portfolio weights, while ensuring the sum of the weights equals 1 and all weights are non-negative.
 
 **Results**
@@ -310,17 +312,17 @@ The optimal portfolio assigns the highest weight to **MSFT** (63.39%), followed 
 
 **Portfolio Metrics**
 
-- Expected Portfolio Return $(E(ret))$:
- $E(ret) = 0.01957801 \text{ or 1.9578% per month}$
+- Expected Portfolio Return $$(E(ret))$$:
+ $$E(ret) = 0.01957801 \text{ or 1.9578% per month}$$
 
 - Portfolio Variance:
- $\text{Variance} = 0.003235571$
+ $$\text{Variance} = 0.003235571$$
 
-- Portfolio Standard Deviation $\sigma_p$:
-  $\sigma_p = \sqrt{0.003235571} \simeq 0.0569$
+- Portfolio Standard Deviation $$\sigma_p$$:
+  $$\sigma_p = \sqrt{0.003235571} \simeq 0.0569$$
 
 - **Sharpe Ratio**:
-  $SR = 0.284413126$
+ $$SR = 0.284413126$$
 
 ### Explanation of Portfolio Optimization Results
 
