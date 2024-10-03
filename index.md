@@ -203,7 +203,7 @@ Where:
 **Deriving the Forecasted Variance-Covariance Matrix:**
 The final step is to combine the forecasted individual volatilities and dynamic correlations to derive the variance-covariance matrix. This is done using the following formula:
 
-$\Sigma_{t+1} = D_{t+1} Q_{t+1} D_{t+1}$
+$$\Sigma_{t+1} = D_{t+1} Q_{t+1} D_{t+1}$$
 
 Where:
 - $\Sigma_{t+1}$: Forecasted variance-covariance matrix for the next period
