@@ -183,19 +183,19 @@ These expected returns indicate the predicted monthly performance of each stock,
 To forecast the variance-covariance matrix, we model both the individual stock volatilities and the dynamic correlations between the stocks.
 
 **Modeling Conditional Variances:**
-The conditional variances (volatility) for each stock are modeled using the GARCH(1,1) specification, which incorporates the previously estimated GARCH parameters  $$\omega_{i}$$, $$\alpha_{i}$$, and $$\beta_{i}$$ for each stock:
+The conditional variances (volatility) for each stock are modeled using the GARCH(1,1) specification, which incorporates the previously estimated GARCH parameters  $$\omega_{i}$$ , $$\alpha_{i}$$, and $$\beta_{i}$$ for each stock:
 
-$\sigma^2_{i,t+1} = \omega_i + \alpha_i \epsilon^2_{i,t} + \beta_i \sigma^2_{i,t}$
+$$\sigma^2_{i,t+1} = \omega_i + \alpha_i \epsilon^2_{i,t} + \beta_i \sigma^2_{i,t}$$
 Where:
-- $\omega_{i}$: GARCH model constant for stock \(i\)
-- $\alpha_i$: Effect of past shocks on volatility
-- $\beta_{i}$: Persistence of past volatility
-- $\sigma^2_{i,t}$: Conditional variance (volatility) of stock \(i\) at time \(t\)
+- $$\omega_{i}$$: GARCH model constant for stock \(i\)
+- $$\alpha_i$$: Effect of past shocks on volatility
+- $$\beta_{i}$$: Persistence of past volatility
+- $$\sigma^2_{i,t}$$: Conditional variance (volatility) of stock \(i\) at time \(t\)
 
 ** Modeling Dynamic Conditional Correlations:**
 The DCC(1,1) model parameters (\(dcca1\) and \(dccb1\)) are used to estimate the time-varying correlations between the stocks. This captures how correlations between the stocks change over time:
 
-$Q_{t+1} = (1 - dcca1 - dccb1) \bar{Q} + dcca1 \epsilon_t \epsilon'_t + dccb1 Q_t$
+$$Q_{t+1} = (1 - dcca1 - dccb1) \bar{Q} + dcca1 \epsilon_t \epsilon'_t + dccb1 Q_t$$
 
 Where:
 - $\bar{Q}$: Unconditional correlation matrix (the long-run average correlation between the stocks)
